@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelFirstApp.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelFirstAppStoreContainer">
+    <EntitySet Name="ModelFirst_Test" EntityType="ModelFirstApp.Store.ModelFirst_Test" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModelFirst_TestFirst" EntityType="ModelFirstApp.Store.ModelFirst_TestFirst" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ModelFirst_TestModelFirst_TestFirst" Association="ModelFirstApp.Store.ModelFirst_TestModelFirst_TestFirst">
+      <End Role="ModelFirst_Test" EntitySet="ModelFirst_Test" />
+      <End Role="ModelFirst_TestFirst" EntitySet="ModelFirst_TestFirst" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ModelFirst_Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModelFirst_TestFirst">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModelFirst_TestId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ModelFirst_TestModelFirst_TestFirst">
+    <End Role="ModelFirst_Test" Type="ModelFirstApp.Store.ModelFirst_Test" Multiplicity="1" />
+    <End Role="ModelFirst_TestFirst" Type="ModelFirstApp.Store.ModelFirst_TestFirst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModelFirst_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ModelFirst_TestFirst">
+        <PropertyRef Name="ModelFirst_TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelFirstApp" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelFirstAppContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ModelFirst_Test" EntityType="ModelFirstApp.ModelFirst_Test" />
+          <EntitySet Name="ModelFirst_TestFirst" EntityType="ModelFirstApp.ModelFirst_TestFirst" />
+          <AssociationSet Name="ModelFirst_TestModelFirst_TestFirst" Association="ModelFirstApp.ModelFirst_TestModelFirst_TestFirst">
+            <End Role="ModelFirst_Test" EntitySet="ModelFirst_Test" />
+            <End Role="ModelFirst_TestFirst" EntitySet="ModelFirst_TestFirst" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ModelFirst_Test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentName" Type="String" Nullable="false" />
+          <NavigationProperty Name="ModelFirst_TestFirst" Relationship="ModelFirstApp.ModelFirst_TestModelFirst_TestFirst" FromRole="ModelFirst_Test" ToRole="ModelFirst_TestFirst" />
+        </EntityType>
+        <EntityType Name="ModelFirst_TestFirst">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassName" Type="String" Nullable="false" />
+          <NavigationProperty Name="ModelFirst_Test" Relationship="ModelFirstApp.ModelFirst_TestModelFirst_TestFirst" FromRole="ModelFirst_TestFirst" ToRole="ModelFirst_Test" />
+          <Property Name="ModelFirst_TestId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="ModelFirst_TestModelFirst_TestFirst">
+          <End Type="ModelFirstApp.ModelFirst_Test" Role="ModelFirst_Test" Multiplicity="1" />
+          <End Type="ModelFirstApp.ModelFirst_TestFirst" Role="ModelFirst_TestFirst" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ModelFirst_Test">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModelFirst_TestFirst">
+              <PropertyRef Name="ModelFirst_TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelFirstAppStoreContainer" CdmEntityContainer="ModelFirstAppContainer">
+    <EntitySetMapping Name="ModelFirst_Test">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelFirstApp.ModelFirst_Test)">
+        <MappingFragment StoreEntitySet="ModelFirst_Test">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModelFirst_TestFirst">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelFirstApp.ModelFirst_TestFirst)">
+        <MappingFragment StoreEntitySet="ModelFirst_TestFirst">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ModelFirst_TestId" ColumnName="ModelFirst_TestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

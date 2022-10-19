@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ankit_PracticeModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Ankit_PracticeEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ModelFirst_Test" EntityType="Ankit_PracticeModel1.ModelFirst_Test" />
+    <EntitySet Name="ModelFirst_TestSecond" EntityType="Ankit_PracticeModel1.ModelFirst_TestSecond" />
+    <AssociationSet Name="ModelFirst_TestModelFirst_TestSecond" Association="Ankit_PracticeModel1.ModelFirst_TestModelFirst_TestSecond">
+      <End Role="ModelFirst_Test" EntitySet="ModelFirst_Test" />
+      <End Role="ModelFirst_TestSecond" EntitySet="ModelFirst_TestSecond" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ModelFirst_Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentName" Type="String" Nullable="false" />
+    <Property Name="StudentMob" Type="String" Nullable="false" />
+    <NavigationProperty Name="ModelFirst_TestSecond" Relationship="Ankit_PracticeModel1.ModelFirst_TestModelFirst_TestSecond" FromRole="ModelFirst_Test" ToRole="ModelFirst_TestSecond" />
+  </EntityType>
+  <EntityType Name="ModelFirst_TestSecond">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="String" Nullable="false" />
+    <NavigationProperty Name="ModelFirst_Test" Relationship="Ankit_PracticeModel1.ModelFirst_TestModelFirst_TestSecond" FromRole="ModelFirst_TestSecond" ToRole="ModelFirst_Test" />
+    <Property Name="StudentID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="ModelFirst_TestModelFirst_TestSecond">
+    <End Type="Ankit_PracticeModel1.ModelFirst_Test" Role="ModelFirst_Test" Multiplicity="1" />
+    <End Type="Ankit_PracticeModel1.ModelFirst_TestSecond" Role="ModelFirst_TestSecond" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModelFirst_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ModelFirst_TestSecond">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Ankit_PracticeModel1StoreContainer" CdmEntityContainer="Ankit_PracticeEntities1">
+    <EntitySetMapping Name="ModelFirst_Test">
+      <EntityTypeMapping TypeName="IsTypeOf(Ankit_PracticeModel1.ModelFirst_Test)">
+        <MappingFragment StoreEntitySet="ModelFirst_Test">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="StudentMob" ColumnName="StudentMob" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModelFirst_TestSecond">
+      <EntityTypeMapping TypeName="IsTypeOf(Ankit_PracticeModel1.ModelFirst_TestSecond)">
+        <MappingFragment StoreEntitySet="ModelFirst_TestSecond">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

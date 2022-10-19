@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Demo.master.cs" Inherits="dynamicField.FormWihtMasterPage.Demo" %>
+<%@ Register Src="~/FormWihtMasterPage/CommonPage.ascx" TagName="CommonPage" TagPrefix="cc1" %>
+<!DOCTYPE html>
+<link href="../Content/bootstrap.css" rel="stylesheet" />
+<link href="../Content/bootstrap.min.css" rel="stylesheet" />
+<link href="../Content/Site.css" rel="stylesheet" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Heading</title>
+    <style>
+            .back{
+                background-color:cyan;
+            }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" class="back" runat="server">
+         <asp:ScriptManager runat="server" ID="scrptmng"></asp:ScriptManager>
+    <div>
+        <asp:Label runat="server" ID="lblHeading"><h1>Heading</h1></asp:Label>
+        <div runat="server" id="divCom" visible="false">
+            <cc1:CommonPage runat="server" id="Compage"/>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

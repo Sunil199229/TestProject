@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ankit_PracticeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ankit_Practice.dbo.MstOrganization' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MstOrganization">
+    <Key>
+      <PropertyRef Name="OrgCode" />
+    </Key>
+    <Property Name="OrgCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrgCodeOth" Type="int" />
+    <Property Name="OrgCityCode" Type="int" />
+    <Property Name="OrgName" Type="varchar" MaxLength="100" />
+    <Property Name="ContactPer1Name" Type="varchar" MaxLength="60" />
+    <Property Name="ContactPer1Mobile" Type="varchar" MaxLength="10" />
+    <Property Name="ContactPer1Email" Type="varchar" MaxLength="30" />
+    <Property Name="ContactPer2Name" Type="varchar" MaxLength="60" />
+    <Property Name="ContactPer2Mobile" Type="varchar" MaxLength="10" />
+    <Property Name="ContactPer2Email" Type="varchar" MaxLength="30" />
+    <Property Name="ActiveDate" Type="date" />
+    <Property Name="AgreementNo" Type="varchar" MaxLength="60" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ankit_Practice.dbo.MstUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MstUser">
+    <Key>
+      <PropertyRef Name="UserCode" />
+    </Key>
+    <Property Name="UserCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCodeOdp" Type="int" />
+    <Property Name="UserLevel" Type="int" />
+    <Property Name="UserLoginId" Type="varchar" MaxLength="30" />
+    <Property Name="UserLoginPass" Type="varchar" MaxLength="30" />
+    <Property Name="UserEmpCode" Type="int" />
+    <Property Name="OrgCode" Type="int" />
+    <Property Name="CityCode" Type="int" />
+    <Property Name="EntryDate" Type="date" />
+    <Property Name="EntryUserCode" Type="int" />
+    <Property Name="UserSubLevelCode" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="EmailId" Type="varchar" MaxLength="40" />
+    <Property Name="AadhaarNo" Type="varchar" MaxLength="15" />
+    <Property Name="DeptCode" Type="int" />
+    <Property Name="SubDeptCode" Type="int" />
+    <Property Name="Desgcode" Type="int" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="ShippingNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="SerialNo" Type="int" />
+    <Property Name="BatchNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="MRP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Student_Id" />
+    </Key>
+    <Property Name="Student_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="varchar" MaxLength="50" />
+    <Property Name="Age" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="GmailId" Type="varchar" MaxLength="50" />
+    <Property Name="Qualification" Type="varchar" MaxLength="50" />
+    <Property Name="Favorite" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="Student_Id" />
+    </Key>
+    <Property Name="Student_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Age" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="GmailId" Type="varchar" MaxLength="50" />
+    <Property Name="Qualification" Type="varchar" MaxLength="50" />
+    <Property Name="Favorite" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SystemShow">
+    <Key>
+      <PropertyRef Name="SrNo" />
+    </Key>
+    <Property Name="SrNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="FilePath" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_City">
+    <Key>
+      <PropertyRef Name="City_Id" />
+    </Key>
+    <Property Name="City_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="City_Name" Type="varchar" MaxLength="50" />
+    <Property Name="State_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Country">
+    <Key>
+      <PropertyRef Name="Country_Id" />
+    </Key>
+    <Property Name="Country_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Designation">
+    <Key>
+      <PropertyRef Name="Designation_Id" />
+    </Key>
+    <Property Name="Designation_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designation_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Favorite">
+    <Key>
+      <PropertyRef Name="Favorite_Id" />
+    </Key>
+    <Property Name="Favorite_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Favorite_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Gender">
+    <Key>
+      <PropertyRef Name="Gender_Id" />
+    </Key>
+    <Property Name="Gender_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gender_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Linq">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_State">
+    <Key>
+      <PropertyRef Name="State_Id" />
+    </Key>
+    <Property Name="State_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Country_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Function Name="fnNumberToWords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Number" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Fu_Gender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Gender_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GET_DIGIT2WORD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="M_AMOUNT" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="ReturnSite" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="site_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_Menus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ind" Type="int" Mode="In" />
+    <Parameter Name="InterfaceCode" Type="int" Mode="In" />
+    <Parameter Name="LevelCode" Type="int" Mode="In" />
+    <Parameter Name="MenuHeaderID" Type="int" Mode="In" />
+    <Parameter Name="MenuItemID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ind" Type="int" Mode="In" />
+    <Parameter Name="IsAND" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ProductName" Type="varchar" Mode="In" />
+    <Parameter Name="Size" Type="varchar" Mode="In" />
+    <Parameter Name="Price" Type="numeric" Mode="In" />
+    <Parameter Name="MfgDate" Type="date" Mode="In" />
+    <Parameter Name="Category" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_Student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ind" Type="int" Mode="In" />
+    <Parameter Name="Student_Id" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="varchar" Mode="In" />
+    <Parameter Name="Age" Type="varchar" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="MobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="GmailId" Type="varchar" Mode="In" />
+    <Parameter Name="Qualification" Type="varchar" Mode="In" />
+    <Parameter Name="Favorite" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_Students" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ind" Type="int" Mode="In" />
+    <Parameter Name="Student_Id" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="date" Mode="In" />
+    <Parameter Name="Age" Type="varchar" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="MobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="GmailId" Type="varchar" Mode="In" />
+    <Parameter Name="Qualification" Type="varchar" Mode="In" />
+    <Parameter Name="Favorite" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ind" Type="int" Mode="In" />
+    <Parameter Name="Username" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="Ankit_PracticeModelStoreContainer">
+    <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemShow" EntityType="Self.SystemShow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_City" EntityType="Self.tbl_City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Country" EntityType="Self.tbl_Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Designation" EntityType="Self.tbl_Designation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Favorite" EntityType="Self.tbl_Favorite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Gender" EntityType="Self.tbl_Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Linq" EntityType="Self.tbl_Linq" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_State" EntityType="Self.tbl_State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MstOrganization" EntityType="Self.MstOrganization" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MstOrganization].[OrgCode] AS [OrgCode], 
+    [MstOrganization].[OrgCodeOth] AS [OrgCodeOth], 
+    [MstOrganization].[OrgCityCode] AS [OrgCityCode], 
+    [MstOrganization].[OrgName] AS [OrgName], 
+    [MstOrganization].[ContactPer1Name] AS [ContactPer1Name], 
+    [MstOrganization].[ContactPer1Mobile] AS [ContactPer1Mobile], 
+    [MstOrganization].[ContactPer1Email] AS [ContactPer1Email], 
+    [MstOrganization].[ContactPer2Name] AS [ContactPer2Name], 
+    [MstOrganization].[ContactPer2Mobile] AS [ContactPer2Mobile], 
+    [MstOrganization].[ContactPer2Email] AS [ContactPer2Email], 
+    [MstOrganization].[ActiveDate] AS [ActiveDate], 
+    [MstOrganization].[AgreementNo] AS [AgreementNo], 
+    [MstOrganization].[Active] AS [Active]
+    FROM [dbo].[MstOrganization] AS [MstOrganization]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MstUser" EntityType="Self.MstUser" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MstUser].[UserCode] AS [UserCode], 
+    [MstUser].[UserCodeOdp] AS [UserCodeOdp], 
+    [MstUser].[UserLevel] AS [UserLevel], 
+    [MstUser].[UserLoginId] AS [UserLoginId], 
+    [MstUser].[UserLoginPass] AS [UserLoginPass], 
+    [MstUser].[UserEmpCode] AS [UserEmpCode], 
+    [MstUser].[OrgCode] AS [OrgCode], 
+    [MstUser].[CityCode] AS [CityCode], 
+    [MstUser].[EntryDate] AS [EntryDate], 
+    [MstUser].[EntryUserCode] AS [EntryUserCode], 
+    [MstUser].[UserSubLevelCode] AS [UserSubLevelCode], 
+    [MstUser].[UserName] AS [UserName], 
+    [MstUser].[MobileNo] AS [MobileNo], 
+    [MstUser].[EmailId] AS [EmailId], 
+    [MstUser].[AadhaarNo] AS [AadhaarNo], 
+    [MstUser].[DeptCode] AS [DeptCode], 
+    [MstUser].[SubDeptCode] AS [SubDeptCode], 
+    [MstUser].[Desgcode] AS [Desgcode]
+    FROM [dbo].[MstUser] AS [MstUser]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

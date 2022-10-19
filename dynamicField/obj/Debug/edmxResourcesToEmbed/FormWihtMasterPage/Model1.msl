@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Ankit_PracticeModelStoreContainer" CdmEntityContainer="Ankit_PracticeEntities">
+    <EntitySetMapping Name="PRODUCTs">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.PRODUCT">
+        <MappingFragment StoreEntitySet="PRODUCT">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="ShippingNo" ColumnName="ShippingNo" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="MRP" ColumnName="MRP" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="Student_Id" ColumnName="Student_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="GmailId" ColumnName="GmailId" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="Favorite" ColumnName="Favorite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students1">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.Student1">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Student_Id" ColumnName="Student_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="GmailId" ColumnName="GmailId" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="Favorite" ColumnName="Favorite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemShows">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.SystemShow">
+        <MappingFragment StoreEntitySet="SystemShow">
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_City">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_City">
+        <MappingFragment StoreEntitySet="tbl_City">
+          <ScalarProperty Name="City_Id" ColumnName="City_Id" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="State_Id" ColumnName="State_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Country">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_Country">
+        <MappingFragment StoreEntitySet="tbl_Country">
+          <ScalarProperty Name="Country_Id" ColumnName="Country_Id" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Designation">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_Designation">
+        <MappingFragment StoreEntitySet="tbl_Designation">
+          <ScalarProperty Name="Designation_Id" ColumnName="Designation_Id" />
+          <ScalarProperty Name="Designation_Name" ColumnName="Designation_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Favorite">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_Favorite">
+        <MappingFragment StoreEntitySet="tbl_Favorite">
+          <ScalarProperty Name="Favorite_Id" ColumnName="Favorite_Id" />
+          <ScalarProperty Name="Favorite_Name" ColumnName="Favorite_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Gender">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_Gender">
+        <MappingFragment StoreEntitySet="tbl_Gender">
+          <ScalarProperty Name="Gender_Id" ColumnName="Gender_Id" />
+          <ScalarProperty Name="Gender_Name" ColumnName="Gender_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Linq">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_Linq">
+        <MappingFragment StoreEntitySet="tbl_Linq">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_State">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.tbl_State">
+        <MappingFragment StoreEntitySet="tbl_State">
+          <ScalarProperty Name="State_Id" ColumnName="State_Id" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+          <ScalarProperty Name="Country_Id" ColumnName="Country_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTables">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.UserTable">
+        <MappingFragment StoreEntitySet="UserTable">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MstOrganizations">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.MstOrganization">
+        <MappingFragment StoreEntitySet="MstOrganization">
+          <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+          <ScalarProperty Name="OrgCodeOth" ColumnName="OrgCodeOth" />
+          <ScalarProperty Name="OrgCityCode" ColumnName="OrgCityCode" />
+          <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+          <ScalarProperty Name="ContactPer1Name" ColumnName="ContactPer1Name" />
+          <ScalarProperty Name="ContactPer1Mobile" ColumnName="ContactPer1Mobile" />
+          <ScalarProperty Name="ContactPer1Email" ColumnName="ContactPer1Email" />
+          <ScalarProperty Name="ContactPer2Name" ColumnName="ContactPer2Name" />
+          <ScalarProperty Name="ContactPer2Mobile" ColumnName="ContactPer2Mobile" />
+          <ScalarProperty Name="ContactPer2Email" ColumnName="ContactPer2Email" />
+          <ScalarProperty Name="ActiveDate" ColumnName="ActiveDate" />
+          <ScalarProperty Name="AgreementNo" ColumnName="AgreementNo" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MstUsers">
+      <EntityTypeMapping TypeName="Ankit_PracticeModel.MstUser">
+        <MappingFragment StoreEntitySet="MstUser">
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserCodeOdp" ColumnName="UserCodeOdp" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="UserLoginId" ColumnName="UserLoginId" />
+          <ScalarProperty Name="UserLoginPass" ColumnName="UserLoginPass" />
+          <ScalarProperty Name="UserEmpCode" ColumnName="UserEmpCode" />
+          <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserCode" ColumnName="EntryUserCode" />
+          <ScalarProperty Name="UserSubLevelCode" ColumnName="UserSubLevelCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="AadhaarNo" ColumnName="AadhaarNo" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="SubDeptCode" ColumnName="SubDeptCode" />
+          <ScalarProperty Name="Desgcode" ColumnName="Desgcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Menus" FunctionName="Ankit_PracticeModel.Store.Sp_Menus" />
+    <FunctionImportMapping FunctionImportName="SP_Product" FunctionName="Ankit_PracticeModel.Store.SP_Product">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Ankit_PracticeModel.SP_Product_Result">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Student" FunctionName="Ankit_PracticeModel.Store.Sp_Student" />
+    <FunctionImportMapping FunctionImportName="Sp_Students" FunctionName="Ankit_PracticeModel.Store.Sp_Students">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Ankit_PracticeModel.Sp_Students_Result">
+          <ScalarProperty Name="Student_Id" ColumnName="Student_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="GmailId" ColumnName="GmailId" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="Favorite" ColumnName="Favorite" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpLogin" FunctionName="Ankit_PracticeModel.Store.SpLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Ankit_PracticeModel.SpLogin_Result">
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserCodeOdp" ColumnName="UserCodeOdp" />
+          <ScalarProperty Name="UserEmpCode" ColumnName="UserEmpCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityCodeOther" ColumnName="CityCodeOther" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+          <ScalarProperty Name="SubDeptCode" ColumnName="SubDeptCode" />
+          <ScalarProperty Name="Desgcode" ColumnName="Desgcode" />
+          <ScalarProperty Name="OrgName1" ColumnName="OrgName1" />
+          <ScalarProperty Name="OrgAddress" ColumnName="OrgAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

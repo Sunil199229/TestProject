@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ankit_PracticeModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Ankit_PracticeModel1StoreContainer">
+    <EntitySet Name="ModelFirst_Test" EntityType="Ankit_PracticeModel1.Store.ModelFirst_Test" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModelFirst_TestSecond" EntityType="Ankit_PracticeModel1.Store.ModelFirst_TestSecond" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ModelFirst_TestModelFirst_TestSecond" Association="Ankit_PracticeModel1.Store.ModelFirst_TestModelFirst_TestSecond">
+      <End Role="ModelFirst_Test" EntitySet="ModelFirst_Test" />
+      <End Role="ModelFirst_TestSecond" EntitySet="ModelFirst_TestSecond" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ModelFirst_Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StudentMob" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModelFirst_TestSecond">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ModelFirst_TestModelFirst_TestSecond">
+    <End Role="ModelFirst_Test" Type="Ankit_PracticeModel1.Store.ModelFirst_Test" Multiplicity="1" />
+    <End Role="ModelFirst_TestSecond" Type="Ankit_PracticeModel1.Store.ModelFirst_TestSecond" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModelFirst_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ModelFirst_TestSecond">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
